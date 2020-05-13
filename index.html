@@ -4,32 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>National Parks Service API</title>
+    <title>Stock Data Finder</title>
     <link rel="shortcut icon" href="#">
     <link rel="stylesheet" href="index.css">
 </head>
+
 <body>
-    <div class="container">
-        <h1>National Park Finder</h1>
-
+    <main>
+        <header class="home">
+            <h1>STOCK DATA FINDER</h1>
+        </header>
+        
         <form id="js-form">
-            <label for="search-term">Search for parks in one or more states:</label>
-            <input type="text" name="search-term" id="js-search-term" required>
-            <br>
-            <br>
-            <label for="max-results">Maximum results to return</label>
-            <input type="number" name="max-results" id="js-max-results" value="10">
-
-            <input type="submit" value="Go!">
+            <label for="search-ticker">Enter Stock Ticker Symbol:</label>
+            <input type="text" name="search-ticker" id="js-search-ticker" required>
+            <input type="submit" value="Search">
         </form>
 
-        <p id="js-error-message" class="error-message"></p>
-        <section id="results" class="hidden">
-          <h2>Search results</h2>
-          <ul id="results-list">
-          </ul>
+        <section class="companyInfo">
+            <h2>About the Company</h2>
+            <p class="results-companyInfo"></p>
         </section>
-    </div>
+
+        <section class="books">
+            <h2>Statistics</h2>
+            <p class="results-statistics"></p>
+        </section>
+
+        <section class="sectorPerformance">
+            <h2>Sector Performance</h2>
+            <p class="results-sectPerformance"></p>
+        </section>
+
+        <section class="news">
+            <h2>Current News</h2>
+            <p class="results-news"></p>
+        </section>
+    </main>
+
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <script src="index.js"></script>
 </body>
